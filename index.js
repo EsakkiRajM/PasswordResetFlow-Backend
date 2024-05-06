@@ -6,13 +6,10 @@ const { SignUpModel, ForgotpasswordModel } = require('./Schema');
 const dotenv = require('dotenv').config();
 const bcryptjs = require('bcryptjs');
 const { v4: uuid } = require('uuid');
-const nodemailer = require("nodemailer");
 
 const app = express();
 //const PORT = dotenv.parsed.PORT;
 const PORT = process.env.PORT;
-const email = process.env.EMAIL
-const pass = process.env.PASS
 
 app.use(bodyParser.json());
 app.use(cors());
